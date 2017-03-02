@@ -5,23 +5,22 @@
 #include <string.h>
 
 /* Possible Letters contained in the names*/
-char variables[65] = "abcdefghijklmnopqrstuvwxyz'´`^° ABCDEFGHIJKLMNOPQRSTUVWXYZ'´`^° ";
+char variables[65] = "abcdefghijklmnopqrstuvwxyz'Â´`^Â° ABCDEFGHIJKLMNOPQRSTUVWXYZ'Â´`^Â° ";
 
 
 main()
 {
 	
-	printf("Random Name Generator\n");
+	printf("Random Word Generator\n");
 
 	int varMax=0;				// Max Length of Name	
-	int r=0;
-	int x = 0;
-	int i = 0;
-	char y=0;
-	printf("Please enter the names length(up to 15 letters)");
+	int r = 0;				// The current position within the word
+	int x = 0;				// Contains the random letter later on
+	int i = 0;				// Multiplier on how many randomization runs should be made
+	printf("Please enter the words length(up to 15 letters)");
 	scanf_s("%d",&varMax);
-	int nameStr[15];
-	srand(time(NULL));
+	int nameStr[15];			// Dynamic allocation would be better, but didn't know the difference when upon creation
+	srand(time(NULL));			
 
 		
 			
@@ -30,13 +29,9 @@ main()
 			for (;r <14;r++)
 			{
 				x = (rand() % 65);
-				//printf("x=%d\n", x);
 				nameStr[r] = variables[x];
-				//printf("\nThe generator shows a %s\n", nameStr[r]);
-				//r++;
 			}
 			i++;
-			//printf("%s\n", nameStr);
 		}
 		nameStr[14] = "\0";
 			
