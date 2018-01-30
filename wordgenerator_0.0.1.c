@@ -19,7 +19,7 @@ main()
 	int i = 0;				// Multiplier on how many randomization runs should be made
 	printf("Please enter the words length(up to 15 letters)");
 	scanf_s("%d",&varMax);
-	int nameStr[15];			// Dynamic allocation would be better, but didn't know the difference when upon creation
+	int nameStr[15];			// Dynamic allocation would be better, but didn't know the difference while creating
 	srand(time(NULL));			
 
 		
